@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo do Impostor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1> Jogo do Impostor</h1>
+
+    <!-- SETUP -->
+    <div id="setup">
+      <label>
+        Nomes dos jogadores  
+        <small>(separados por vírgula)</small>
+        <input
+          type="text"
+          id="nomesJogadores"
+          placeholder="Pedro, Samuel, Eloisa"
+        >
+      </label>
+
+      <label>
+        Tema
+        <select id="tema">
+          <option value="filmes">Filmes</option>
+          <option value="comida">Comida</option>
+          <option value="animais">Animais</option>
+        </select>
+      </label>
+
+      <button onclick="iniciarJogo()">Iniciar jogo</button>
+    </div>
+
+    <!-- JOGO -->
+    <div id="jogo" class="hidden">
+      <h2 id="jogadorTitulo"></h2>
+      <button onclick="mostrarPalavra()">Ver palavra</button>
+    </div>
+
+    <!-- FINAL -->
+    <div id="resultado" class="hidden">
+      <h2>Todos já viram</h2>
+      <p>
+        Agora conversem entre si e descubram quem é o impostor 
+      </p>
+      <button onclick="location.reload()">Jogar novamente</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
