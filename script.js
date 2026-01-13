@@ -1,88 +1,134 @@
-// ===============================
-// BANCO DE DADOS
-// ===============================
-
 const banco = {
   filmes: [
     {
       palavra: "Frozen",
-      dicas: [
-        "isolamento emocional",
-        "frio constante",
-        "amor que quebra bloqueios",
-        "poder difícil de controlar"
-      ]
+      dicas: ["isolamento", "frio emocional", "laço familiar"]
     },
     {
       palavra: "Toy Story",
-      dicas: [
-        "medo de ser esquecido",
-        "vida secreta",
-        "ciúmes",
-        "amizade construída"
-      ]
+      dicas: ["medo de ser esquecido", "vida secreta", "amizade construída"]
     },
     {
       palavra: "Rei Leão",
-      dicas: [
-        "culpa pelo passado",
-        "destino inevitável",
-        "fuga",
-        "retorno necessário"
-      ]
+      dicas: ["culpa", "destino", "retorno necessário"]
     },
     {
       palavra: "Homem-Aranha",
-      dicas: [
-        "responsabilidade excessiva",
-        "vida dupla",
-        "sacrifício pessoal",
-        "culpa por não agir"
-      ]
+      dicas: ["responsabilidade", "vida dupla", "sacrifício"]
+    },
+    {
+      palavra: "Vingadores",
+      dicas: ["grupo improvável", "união forçada", "ameaça maior"]
+    },
+    {
+      palavra: "Jurassic Park",
+      dicas: ["controle ilusório", "natureza indomável", "erro humano"]
+    },
+    {
+      palavra: "Divertida Mente",
+      dicas: ["emoções em conflito", "crescimento", "mudança interna"]
+    },
+    {
+      palavra: "Monstros S.A.",
+      dicas: ["medo como recurso", "trabalho repetitivo", "empatia"]
+    },
+    {
+      palavra: "Aladdin",
+      dicas: ["desejo", "identidade escondida", "liberdade"]
+    },
+    {
+      palavra: "Cinderela",
+      dicas: ["espera", "transformação", "tempo limitado"]
     }
   ],
 
   comida: [
     {
       palavra: "Maçã",
-      dicas: [
-        "queda que muda tudo",
-        "conhecimento proibido",
-        "algo simples e simbólico"
-      ]
+      dicas: ["queda simbólica", "conhecimento", "simplicidade enganosa"]
     },
     {
       palavra: "Pizza",
-      dicas: [
-        "divisão",
-        "coletividade",
-        "diferenças num mesmo todo"
-      ]
+      dicas: ["compartilhamento", "coletividade", "escolhas"]
+    },
+    {
+      palavra: "Chocolate",
+      dicas: ["prazer imediato", "recompensa emocional", "culpa leve"]
+    },
+    {
+      palavra: "Hambúrguer",
+      dicas: ["excesso", "popularidade", "conforto rápido"]
+    },
+    {
+      palavra: "Sorvete",
+      dicas: ["alívio temporário", "infância", "fragilidade"]
+    },
+    {
+      palavra: "Banana",
+      dicas: ["energia rápida", "simplicidade", "cotidiano"]
+    },
+    {
+      palavra: "Bolo",
+      dicas: ["celebração", "ritual", "partilha"]
+    },
+    {
+      palavra: "Arroz",
+      dicas: ["base constante", "presença silenciosa", "rotina"]
+    },
+    {
+      palavra: "Batata Frita",
+      dicas: ["prazer simples", "vício leve", "companhia"]
+    },
+    {
+      palavra: "Pão",
+      dicas: ["essencial", "origem", "sustento"]
     }
   ],
 
   animais: [
     {
       palavra: "Cachorro",
-      dicas: [
-        "lealdade sem cálculo",
-        "proteção constante",
-        "presença fiel"
-      ]
+      dicas: ["lealdade", "presença constante", "proteção"]
     },
     {
       palavra: "Gato",
-      dicas: [
-        "independência",
-        "afeto imprevisível",
-        "presença silenciosa"
-      ]
+      dicas: ["independência", "afeto imprevisível", "distância"]
+    },
+    {
+      palavra: "Leão",
+      dicas: ["autoridade", "isolamento", "força como dever"]
+    },
+    {
+      palavra: "Elefante",
+      dicas: ["memória", "peso simbólico", "presença marcante"]
+    },
+    {
+      palavra: "Pássaro",
+      dicas: ["liberdade observada", "distância", "movimento"]
+    },
+    {
+      palavra: "Peixe",
+      dicas: ["silêncio", "ambiente invisível", "fluxo"]
+    },
+    {
+      palavra: "Cavalo",
+      dicas: ["força guiada", "movimento", "trabalho"]
+    },
+    {
+      palavra: "Tartaruga",
+      dicas: ["tempo próprio", "resistência", "constância"]
+    },
+    {
+      palavra: "Macaco",
+      dicas: ["curiosidade", "imitação", "agilidade"]
+    },
+    {
+      palavra: "Coruja",
+      dicas: ["observação", "noite", "sabedoria silenciosa"]
     }
   ]
 };
 
-// ===============================
-// ESTADO DO JOGO
 // ===============================
 
 let jogadores = [];
@@ -160,3 +206,4 @@ function mostrarPalavra() {
     atualizarTitulo();
   }
 }
+
