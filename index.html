@@ -2,14 +2,14 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Jogo do Impostor – Perguntas</title>
+  <title>Jogo das Perguntas</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="container">
 
-    <h1>🎭 Jogo do Impostor</h1>
+    <h1>🎭 Jogo das Perguntas</h1>
 
     <!-- SETUP -->
     <div id="setup">
@@ -32,12 +32,18 @@
       <button onclick="mostrarPergunta()">Ver pergunta</button>
     </div>
 
-    <!-- FINAL -->
+    <!-- RESULTADO -->
     <div id="resultado" class="hidden">
-      <h2>Todos já responderam</h2>
+      <h2>Rodada encerrada</h2>
+
+      <p><strong>Pergunta da rodada:</strong></p>
+      <p id="perguntaFinal"></p>
+
       <p>
-        Agora conversem entre si e descubram quem é o impostor 😈
+        Agora conversem entre si e tentem descobrir
+        quem respondeu de forma diferente 😈
       </p>
+
       <button onclick="location.reload()">Jogar novamente</button>
     </div>
 
