@@ -10,14 +10,6 @@ const perguntas = [
   {
     normal: "Qual filme você gosta de assistir?",
     diferente: "Qual filme você evita assistir?"
-  },
-  {
-    normal: "O que você costuma fazer no fim de semana?",
-    diferente: "O que você costuma fazer durante a semana?"
-  },
-  {
-    normal: "Qual comida você escolheria para uma festa?",
-    diferente: "Qual comida você escolheria para comer sozinho?"
   }
 ];
 
@@ -25,6 +17,16 @@ let jogadores = [];
 let indiceAtual = 0;
 let indiceDiferente = 0;
 let perguntaSorteada = null;
+
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .getElementById("btnIniciar")
+    .addEventListener("click", iniciarJogo);
+
+  document
+    .getElementById("btnPergunta")
+    .addEventListener("click", mostrarPergunta);
+});
 
 function iniciarJogo() {
   jogadores = document
