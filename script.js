@@ -41,30 +41,30 @@ const banco = [
   }
 ];
 
-function atualizarTitulo() {
-  document.getElementById("jogadorTitulo").innerText =
-    `Vez de: ${jogadores[jogadorAtual]}`;
-}
+let jogadores = [];
+let jogadorAtual = 0;
+let impostorIndex = 0;
+let perguntaAtual = null;
 
-function mostrarPergunta() {
-  const nome = jogadores[jogadorAtual];
+function iniciarJogo() {
+  const nomesInput = document.getElementById("nomesJogadores").value;
 
-  if (jogadorAtual === impostorIndex) {
-    alert(
-      `${nome}, responda:\n\n${perguntaAtual.impostor}`
-    );
-  } else {
-    alert(
-      `${nome}, responda:\n\n${perguntaAtual.normal}`
-    );
+  jogadores = nomesInput
+    .split(",")
+    .map(n => n.trim())
+    .filter(n => n.length > 0);
+
+  if (jogadores.length < 3) {
+    alert("Digite pelo menos 3 jogadores.");
+    return;
   }
 
-  jogadorAtual++;
+  perguntaAtual = banco[Math.floor(Math.random() * banco.length)];
+  impostorIndex = Math.floor(Math.random() * jogadores.length);
+  jogadorAtual = 0;
 
-  if (jogadorAtual >= jogadores.length) {
-    document.getElementById("jogo").classList.add("hidden");
-    document.getElementById("resultado").classList.remove("hidden");
-  } else {
-    atualizarTitulo();
-  }
+  document.getElementById("setup").classList.add("hidden");
+  document.getElementById("jogo").classList.remove("hidden");
+
+  atualizarTitulo();
 }
